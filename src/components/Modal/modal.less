@@ -1,0 +1,79 @@
+.modal {
+  position: fixed;
+  z-index: 1000;
+  height: 100vh;
+  width: 100vw;
+}
+
+.modalMask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalWrap {
+  position: fixed;
+  z-index: 1;
+  top: 40%;
+  left: 50%;
+  width: 315px;
+  transform: translate(-50%, -50%);
+}
+
+.modalMain {
+  width: 100%;
+  min-height: 145px;
+  font-size: 14px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 18px 16px 17px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.title {
+  color: #000;
+  font-size: 18px;
+  font-family: @MaxisSemiBold;
+  margin-bottom: 12px;
+}
+
+.body {
+  color: var(--maxis-grey2);
+  font-size: 14px;
+  margin-bottom: 15px;
+
+  .img {
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    vertical-align:middle;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  > div {
+    font-size: 16px;
+    font-family: var(--maxis-semi-bold);
+    cursor: pointer;
+  }
+  button {
+    font-size: 16px;
+    font-family: var(--maxis-semi-bold);
+    margin-bottom: 14px;
+    height: 48px;
+  }
+
+  .cancel {
+    color: var(--maxis-grey2);
+  }
+}

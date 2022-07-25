@@ -1,0 +1,67 @@
+.verifywrap {
+  padding: 20px;
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+    font-family: @MaxisSemiBold;
+  }
+  .subTitle {
+    color: var(--maxis-grey2);
+    font-size: 16px;
+    font-family: @MaxisLight;
+    & > span {
+      color: #000;
+      font-weight: bold;
+    }
+  }
+  .ant-input {
+    border-bottom: 1px solid var(--maxis-black) !important;
+    border-radius: 0 !important;
+  }
+  .remark {
+    font-size: 16px;
+    color: var(--maxis-green);
+    margin-top: 30px;
+  }
+  .reSendDisabled {
+    color: rgba(0, 0, 0, 0.35);
+    cursor: no-drop;
+    //   color: #666;
+  }
+}
+
+.form {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #f6f7f6;
+  :global {
+    
+    .adm-list {
+      width: 100%;
+    }
+    .adm-list-default .adm-list-body {
+      border: none;
+      padding-bottom: 10px;
+    }
+    .adm-list-body-inner {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .adm-input-wrapper {
+      width: 14%;
+      height: 65px;
+      font-size: 50px;
+      border-bottom: 1px solid black !important;
+      border-radius: 0 !important;
+      .adm-input {
+        font-size: 50px;
+        text-align: center;
+        font-family: @MaxisSemiBold;
+      }
+    }
+  }
+}

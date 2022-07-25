@@ -1,0 +1,31 @@
+.inputBody {
+  display: flex;
+  align-items: center;
+  .prefix{
+    margin-right: 9px;
+    font-size: 12px;
+  }
+
+  .input {
+    width: 100%;
+    background: var(--maxis-grey1);
+    padding: 8px;
+    border-radius: 3px;
+    line-height: 1;
+    position: relative;
+    height: 31px;
+    ::placeholder {
+      color: var(--maxis-grey2);
+    }
+    &.disabled {
+      opacity: 1;
+      background: var(--maxis-grey3);
+    }
+
+    :global {
+      .adm-input-element {
+        font-size: 12px;
+      }
+    }
+  }
+}

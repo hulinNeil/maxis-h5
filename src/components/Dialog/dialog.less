@@ -1,0 +1,62 @@
+.dialog {
+  position: fixed;
+  z-index: 1000;
+  height: 100vh;
+  width: 100vw;
+}
+
+.dialogMask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialogWrap {
+  position: fixed;
+  z-index: 1;
+  top: 40%;
+  left: 50%;
+  width: 315px;
+  transform: translate(-50%, -50%);
+}
+
+.dialogMain {
+  width: 100%;
+  min-height: 145px;
+  font-size: 14px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 16px 16px 12px 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.body {
+  color: var(--maxis-grey2);
+  font-size: 14px;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 6px;
+  > div {
+    padding: 1px 2px;
+    font-size: 14px;
+    font-family: var(--maxis-semi-bold);
+    cursor: pointer;
+  }
+  .cancel {
+    color: var(--maxis-grey2);
+    margin-right: 30px;
+  }
+  .ok {
+    color: var(--maxis-green);
+  }
+}

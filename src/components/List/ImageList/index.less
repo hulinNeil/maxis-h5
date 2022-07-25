@@ -1,0 +1,54 @@
+.list {
+  padding-bottom: 13px;
+  .title {
+    padding: 13px 16px;
+    font-family: @MaxisSemiBold;
+    font-size: 16px;
+  }
+  .itemWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 68px;
+    align-items: center;
+    border-bottom: 1px solid #f5f5f5;
+    &Left {
+      padding-left: 16px;
+      display: flex;
+      flex-direction: row;
+      &Images {
+        width: 50px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        img {
+          width: 100%;
+        }
+      }
+      &Desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 14px;
+        &Title {
+          font-size: 16px;
+          color: black;
+        }
+        &Code {
+          font-family: @MaxisLight;
+          font-size: 14px;
+          color: var(--maxis-grey2);
+        }
+      }
+    }
+    &Right {
+      padding-right: 16px;
+    }
+  }
+}

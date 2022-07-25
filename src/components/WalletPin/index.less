@@ -1,0 +1,92 @@
+.walletPinWrapper{
+    width: 100%;
+    // height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .container{
+        user-select:none;
+        width: 240px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .headWrapper{
+            padding-top: 70px;
+            // height: 70px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .title{
+                font-size: 20px;
+                font-family: @MaxisSemiBold;
+            }
+            .ellipses{
+                width: 116px;
+                height: 13px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 31px;
+                .cricleItem{
+                    width: 11px;
+                    height: 11px;
+                    border-radius: 50%;
+                    border: 1px solid #000;
+                }
+                .active{
+                    background-color: gray;
+                    border: none;
+                    width: 11px;
+                    height: 11px;
+                    border-radius: 50%;
+                    border: 1px solid #000;
+                }
+            }
+        }
+        .contentWrapper{
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding-top: 80px;
+            .telItem{
+                margin-top: 8px;
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                background-color: var(--maxis-green2);
+                text-align: center;
+                line-height: 70px;
+                font-size: 30px;
+                cursor: pointer;
+            }
+            .telItem:active{
+                background-color: var(--maxis-green3);
+            }
+            .reduceNum{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 70px;
+                height: 70px;
+                text-align: center;
+                line-height: 70px;
+                svg{
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+        .forgotPin{
+            padding-bottom: 20px;
+        }
+    }
+}

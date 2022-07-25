@@ -1,0 +1,66 @@
+@import './reset.css';
+
+@font-face {
+  font-family: MaxisLight;
+  src: url('../fonts/Maxis-Light.otf');
+}
+
+@font-face {
+  font-family: MaxisRegular;
+  src: url('../fonts/Maxis-Regular.otf');
+}
+
+@font-face {
+  font-family: MaxisSemiBold;
+  src: url('../fonts/Maxis-SemiBold.otf');
+}
+
+:root:root {
+  --adm-font-family: MaxisRegular, Helvetica, Arial, sans-serif;
+  --adm-color-primary: #40c706;
+  --adm-button-border-radius: 5px;
+  --maxis-grey1: #f2f2f2;
+  --maxis-grey2: #8e8f98;
+  --maxis-grey3: #dcdcdc;
+  --maxis-special-blue: #002391;
+  --maxis-highlight-blue: #557fff;
+  --maxis-alert-red: #ff0000;
+  --maxis-green: #40c706;
+  --maxis-black: #212121;
+  --maxis-green2: #E2F7D9;
+  --maxis-green3: #aee896;
+  --maxis-semi-bold: @MaxisSemiBold;
+  --max-width: 440px;
+}
+
+html {
+  background-color: #f5f5f5;
+  touch-action: manipulation;
+}
+
+body {
+  font-family: MaxisRegular, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 440px;
+  margin: 0 auto;
+  height: auto;
+  min-height: 100%;
+  background-color: #fff;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.adm-popup-body-position-bottom {
+  max-width: 440px;
+  margin: 0 auto;
+  right: 0;
+}
+.adm-list-body{
+  font-size: 16px;
+}
+.adm-form-item-label{
+  font-size: 14px;
+  color: #000;
+}

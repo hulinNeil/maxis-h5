@@ -1,0 +1,95 @@
+.pageWrapper {
+  // width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+  justify-content: space-between;
+  position: relative;
+
+  :global {
+    .adm-result {
+      padding: 86px 30px 0;
+      overflow: hidden;
+    }
+    .adm-result-icon {
+      box-sizing: content-box;
+      width: 120px;
+      height: 120px;
+      margin-bottom: 60px;
+    }
+    .adm-result-title {
+      color: #000;
+      font-size: 20px;
+      font-family: @MaxisSemiBold;
+    }
+    .adm-result-description {
+      margin: 16px 0;
+      color: var(--maxis-grey2);
+      font-size: 14px;
+    }
+    .adm-button {
+      font-family: @MaxisSemiBold;
+      font-size: 16px;
+    }
+  }
+
+  .icon {
+    font-size: 120px;
+  }
+
+  .action {
+    --gap: 19px;
+    margin: 0 30px;
+    :global {
+      .adm-space-item {
+        flex: 1;
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    font-size: 24px;
+    top: 26px;
+    left: 16px;
+    color: #000;
+  }
+}
+
+.transaction {
+  text-align: center;
+  .id {
+    color: var(--maxis-grey2);
+  }
+  .amount {
+    margin-top: 16px;
+    display: flex;
+    padding: 9px 16px;
+    justify-content: space-between;
+    border-top: 5px solid var(--maxis-grey1);
+    border-bottom: 5px solid var(--maxis-grey1);
+    .field {
+      color: var(--maxis-grey2);
+    }
+  }
+  .description {
+    color: var(--maxis-grey2);
+    text-align: left;
+    padding: 9px 16px;
+  }
+}
+
+.fields {
+  color: var(--maxis-green);
+  text-align: center;
+  margin-top: 14px;
+  .icon {
+    font-size: 22px;
+    &:focus-visible,
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+}

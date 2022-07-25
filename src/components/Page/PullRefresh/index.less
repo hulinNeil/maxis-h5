@@ -1,0 +1,76 @@
+.page-refresh {
+  display: block;
+  width: 100%;
+  height: 56px;
+  position: absolute;
+  top: -56px;
+}
+
+.page-refresh-content,
+.page-refresh-inner {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.page-refresh-content {
+  position: absolute;
+  left: 50%;
+  z-index: 997;
+  -webkit-transform: translate3d(-50%, 0, 0);
+  transform: translate3d(-50%, 0, 0);
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+  display: none;
+}
+
+.page-refresh.page-refresh--pulling .page-refresh-content,
+.page-refresh.page-refresh--aborting .page-refresh-content,
+.page-refresh.page-refresh--reached .page-refresh-content,
+.page-refresh.page-refresh--refreshing .page-refresh-content,
+.page-refresh.page-refresh--restoring .page-refresh-content {
+  display: flex;
+}
+.page-refresh.page-refresh--pulling .page-refresh__spinner,
+.page-refresh.page-refresh--aborting .page-refresh__spinner,
+.page-refresh.page-refresh--reached .page-refresh__spinner,
+.page-refresh.page-refresh--refreshing .page-refresh__icon,
+.page-refresh.page-refresh--restoring .page-refresh__icon {
+  display: none;
+}
+.page-refresh.page-refresh--refreshing .page-refresh__spinner {
+  transform-origin: center center;
+  animation: page-refresh-rotate 2s linear infinite;
+}
+.page-refresh.page-refresh--refreshing .page-refresh__path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: page-refresh-dash 1.5s ease-in-out infinite;
+}
+
+@keyframes page-refresh-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes page-refresh-dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}

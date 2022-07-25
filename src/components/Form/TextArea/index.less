@@ -1,0 +1,21 @@
+.textArea {
+  width: 100%;
+  background: var(--maxis-grey1);
+  padding: 8px;
+  border-radius: 3px;
+  line-height: 1;
+  position: relative;
+  ::placeholder {
+    color: var(--maxis-grey2);
+  }
+  &.disabled {
+    opacity: 1;
+    background: var(--maxis-grey3);
+  }
+
+  :global {
+    .adm-text-area-element {
+      font-size: 12px;
+    }
+  }
+}
